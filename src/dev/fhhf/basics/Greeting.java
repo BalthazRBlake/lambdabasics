@@ -1,4 +1,4 @@
-package dev.fhhf;
+package dev.fhhf.basics;
 
 @FunctionalInterface
 public interface Greeting {

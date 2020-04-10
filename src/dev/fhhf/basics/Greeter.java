@@ -1,4 +1,4 @@
-package dev.fhhf;
+package dev.fhhf.basics;
 
 public class Greeter {
     // Passing a thing that has a behavior NOT just a behavior
