@@ -20,9 +20,9 @@ public class Greeter {
             }
         };
 
-        //greeter.greet(helloWorldGreeting);
-        helloWorldGreeting.perform();
-        lambdaGreeting.perform();
-        innerClassGreeting.perform();
+        greeter.greet(helloWorldGreeting);
+        greeter.greet(lambdaGreeting);
+        greeter.greet(innerClassGreeting);
+
     }
 }
