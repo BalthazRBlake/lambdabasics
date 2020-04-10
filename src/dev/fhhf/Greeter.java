@@ -10,20 +10,23 @@ public class Greeter {
 
         Greeter greeter = new Greeter();
 
-        //HelloWorldGreeting helloWorldGreeting = new HelloWorldGreeting();
-        //Greeting lambdaGreeting = () -> System.out.println("Hello World Lambda");
+        HelloWorldGreeting helloWorldGreeting = new HelloWorldGreeting();
+        Greeting lambdaGreeting = () -> System.out.println("Hello World Lambda");
 
-        /*Greeting innerClassGreeting = new Greeting() {
+        Greeting innerClassGreeting = new Greeting() {
             @Override
             public void perform() {
                 System.out.println("Hello World innerClass");
             }
-        };*/
+        };
 
-        //greeter.greet(helloWorldGreeting);
-        //greeter.greet(lambdaGreeting);
-        //greeter.greet(innerClassGreeting);
+        greeter.greet(helloWorldGreeting);
+        greeter.greet(lambdaGreeting);
+        greeter.greet(innerClassGreeting);
         greeter.greet(()-> System.out.println("Inline Lambda"));
 
+        helloWorldGreeting.another();
+        lambdaGreeting.another();
+        innerClassGreeting.another();
     }
 }
