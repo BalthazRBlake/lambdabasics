@@ -11,10 +11,18 @@ public class Greeter {
         Greeter greeter = new Greeter();
 
         HelloWorldGreeting helloWorldGreeting = new HelloWorldGreeting();
-        Greeting myLambdaFunction = () -> System.out.println("Hello World Lambda");
+        Greeting lambdaGreeting = () -> System.out.println("Hello World Lambda");
+
+        Greeting innerClassGreeting = new Greeting() {
+            @Override
+            public void perform() {
+                System.out.println("Hello World innerClass");
+            }
+        };
 
         //greeter.greet(helloWorldGreeting);
         helloWorldGreeting.perform();
-        myLambdaFunction.perform();
+        lambdaGreeting.perform();
+        innerClassGreeting.perform();
     }
 }
