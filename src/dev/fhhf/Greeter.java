@@ -19,6 +19,7 @@ public class Greeter {
 
 interface MyLambda {
     void foo();
+    int addInt(int a, int b);
 }
 interface MyAdd {
     int addInt(int a, int b);
