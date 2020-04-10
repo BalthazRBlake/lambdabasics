@@ -12,15 +12,6 @@ public class Greeter {
         HelloWorldGreeting helloWorldGreeting = new HelloWorldGreeting();
         greeter.greet(helloWorldGreeting);
 
-        MyLambda myLambdaFunction = () -> System.out.println("Hello World Lambda");
-        MyAdd addLambdaFunction = (int a, int b) -> a + b;
+        Greeting myLambdaFunction = () -> System.out.println("Hello World Lambda");
     }
-}
-
-interface MyLambda {
-    void foo();
-    int addInt(int a, int b);
-}
-interface MyAdd {
-    int addInt(int a, int b);
 }
