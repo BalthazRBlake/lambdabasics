@@ -10,19 +10,10 @@ public class ThisReferenceExample {
 
         ThisReferenceExample thisReferenceExample = new ThisReferenceExample();
 
-        //System.out.println(this); // this can't be reference in Static methods
-
-        thisReferenceExample.doProcess(10, new Process() {
-            @Override
-            public void process(int i) {
-                System.out.println("Value of i: " + i);
-                System.out.println(this); // this works because it points to new instance of Process.
-            }
-
-            @Override
-            public String toString() {
-                return "This is the anonymous inner class";
-            }
+        thisReferenceExample.doProcess(10, i -> {
+            System.out.println("Value of i: " + i);
+            System.out.println(this); // this does'n work because it points to Static main.
+            //Does not override the main this reference, nor creates an instance of a Non-StaticClass
         });
     }
 }
