@@ -20,6 +20,11 @@ public class StreamsExample1 {
 
         people.stream()
                 .filter(p -> p.getLastName().startsWith("C")) // Only people which meets the criteria pass to print
-                .forEach(System.out::println);
+                .forEach(p -> System.out.println(p.getFirstName()));
+
+        long count = people.parallelStream()
+                .filter(p -> p.getLastName().startsWith("C"))
+                .count();
+        System.out.println(count);
     }
 }
